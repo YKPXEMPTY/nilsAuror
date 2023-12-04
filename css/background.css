@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  /* Basic dimensions and centering */
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Dark mode colors and gradient */
+  background: #121212; /* Fallback for browsers that don't support gradients */
+  background: linear-gradient(
+    135deg,
+    #121212 30%,
+    #1a1a1a 20%,
+    #1a1a1a 60%,
+    #121212 60%,
+    #121212 85%,
+    #1a1a1a 85%,
+    #1a1a1a
+  );
+  background-size: 40px 40px;
+  animation: moveBackground 4s linear infinite; /* Animasi latar belakang */
+
+  /* Other styles for content inside container */
+  text-align: center;
+  color: white;
+}
+
+.profile img {
+  width: 150px; /* Ukuran persegi yang diinginkan */
+  height: 140px; /* Ukuran persegi yang diinginkan */
+  border-radius: 15px; /* Atur sudut yang dibulatkan (sesuaikan sesuai keinginan Anda) */
+  object-fit: cover; /* Untuk memastikan gambar sesuai ke dalam area persegi */
+  object-position: center; /* Memastikan gambar berada di tengah-tengah area persegi */
+}
+
+
+@keyframes moveBackground {
+  1% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 40px 40px;
+  }
+}

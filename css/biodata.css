@@ -1,0 +1,12 @@
+/* CSS untuk menata posisi biodata */
+.profile {
+  text-align: center;
+}
+.profile img {
+  width: 200px;
+  height: 200px;
+  border-radius: 40px;
+  object-fit: cover;
+  object-position: center;
+}
+

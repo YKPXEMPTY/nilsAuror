@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Biodata Sederhana</title>
+  <link rel="stylesheet" href="css/background.css">
+  <link rel="stylesheet" href="css/loading.css">
+  <link rel="stylesheet" href="css/biodata.css">
+  <style>
+    /* CSS untuk posisi pojok kanan bawah */
+    .social-media {
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+    }
+
+    /* CSS untuk menampilkan dan menyembunyikan konten utama */
+    .container {
+      opacity: 0; /* Awalnya diatur menjadi tidak terlihat */
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      transition: opacity 1s ease-in-out; /* Animasi fade */
+      display: flex;
+    }
+
+    /* CSS untuk menampilkan konten utama setelah animasi selesai */
+    .container.show {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <!-- Loading animation -->
+  <div class="loader"></div>
+
+  <!-- Konten utama website -->
+  <div class="container">
+    <div class="profile">
+      <img src="Image/foto saya.JPG" alt="Foto Saya">
+      <h1>Daniel Aurora</h1>
+      <p>Umur: 17 tahun</p>
+      <p>Pekerjaan: Mencari Jati Diri</p>
+      <p>Jurusan : Desain Grafika</p>
+  <a href="https://www.instagram.com/danielauror/" target="_blank">
+    <img src="Image/ig.jpg" alt="Instagram" style="width: 35px; height: 35px;">
+  </a>
+</div>
+
+
+    <!-- Tambahkan link CSS sosial media di pojok kanan bawah -->
+    <div class="social-media">
+      <link rel="stylesheet" href="C:/Users/Administrator/Downloads/Website/css/sosial media.css">
+    </div>
+  </div>
+
+  <!-- Script untuk menampilkan konten setelah loading selesai -->
+  <script>
+    window.addEventListener('DOMContentLoaded', function() {
+      setTimeout(function() {
+        var loading = document.querySelector('.loader');
+        var container = document.querySelector('.container');
+
+        loading.style.display = 'none';
+        container.classList.add('show'); /* Menambahkan kelas show untuk menampilkan konten utama */
+      }, 3000);
+    });
+  </script>
+</body>
+</html>
